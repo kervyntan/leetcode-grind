@@ -25,10 +25,12 @@ class Solution(object):
             word_start_index = sentence.find(word)
             # the word exists in the sentence
             if word_start_index != -1:
+                # cannot simply use replace function: doesn't account for case of duplicates
+                # in duplicates case, replace removes all those characters
                 sentence = sentence.replace(word, "")
 
         return len(sentence)
 
 
 execute = Solution()
-execute.minExtraChar("leetscode", ["leet", "code", "leetcode"])
+execute.minExtraChar("dwmodizxvvbosxxw", ["ox","lb","diz","gu","v","ksv","o","nuq","r","txhe","e","wmo","cehy","tskz","ds","kzbu"])
