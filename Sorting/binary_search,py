@@ -27,8 +27,7 @@ class Solution(object):
 
 
 
-        # cannot be <= because when they are equal, means element is found
-        # at that point, exit the loop
+        # if element is found, it'll just return 
         while left <= right:
             mid = (left + right) / 2
 
