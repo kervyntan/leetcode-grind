@@ -28,3 +28,26 @@ def insertion_sort(array):
     return array
 
 print(insertion_sort([1,3, 8, 2, 9,4,6]))
+
+# 2nd time writing this algorithm on my own
+def sortArray(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        # insertion sort
+        # algorithm:
+        # compare the elements
+        # if smaller, then replace
+        if (len(nums) == 0 or len(nums) == 1):
+            return nums
+        
+        for i in range(0, len(nums) - 1): 
+            j = i
+            while j >= 0 and nums[j + 1] < nums[j]:
+                temp = nums[j]
+                nums[j] = nums[j + 1]
+                nums[j + 1] = temp
+                j -= 1
+        return nums
+        
