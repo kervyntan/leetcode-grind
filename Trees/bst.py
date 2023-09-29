@@ -72,6 +72,8 @@ def remove(root, target):
             # first, find the minimum value node attached to it
             # why? because in this case, if you are removing the root, means that you need to replace it
             # with the value of the minimum value node (draw it out to visualise)
+
+            # replace the node to be deleted with the child that has a minimum value
             min_node = min_value_node(root.right)
             root.val = min_node.val
             root.right = remove(root.right, min_node.val)
@@ -91,4 +93,4 @@ first_node.right = third_node
 third_node.right = fourth_node
 
 # print(search(first_node, 4))
-print(insert(first_node, TreeNode(5)))
+print(insert(first_node, TreeNode(4)))
