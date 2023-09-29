@@ -20,17 +20,16 @@ def search(root, target):
 
 def insert(root, target_node):
     if not root:
-        return False
-    
-    # check if target value should be put into the left or right subtree
-    if target_node.val < root.val:
-        insert(root.left, target_node)
-        root.left = target_node
-    
-    elif target_node.val > root.val:
-        insert(root.right, target_node)
-        root.right = target_node
-    
+        return TreeNode(val)
+
+    if val < root.val:
+        # self.insertIntoBST(root.left, val)
+        root.left = self.insertIntoBST(root.left, val)
+        # root.left = TreeNode(val)
+    elif val > root.val:
+        # self.insertIntoBST(root.right, val)
+        root.right = self.insertIntoBST(root.right, val)
+        # root.right = TreeNode(val)
     return root
 
 def min_value_node(root):
