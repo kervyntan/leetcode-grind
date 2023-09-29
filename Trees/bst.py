@@ -43,6 +43,43 @@ def min_value_node(root):
     
     return curr
 
+def remove(root, target):
+    # 2 cases
+    # node to remove has 0/1 child
+    # node to remove has 2 children
+    if not root:
+        return False
+    
+    # check whether the node is in left/right subtree first (basically a search)
+    if target > root.val:
+        root.right = remove(root.right, target)
+    elif target < root.val:
+        root.left = remove(root.left, target)
+    else:
+        # when you found the target node
+        # need to check if it's case 1 - 0/1 child
+        # or case 2 - 2 children
+        if not root.left:
+            # means no left child
+            return root.right
+
+        elif not root.right:
+            return root.left
+        
+        else:
+            # case for 2 child nodes attached to target node
+            
+            # first, find the minimum value node attached to it
+            # why? because in this case, if you are removing the root, means that you need to replace it
+            # with the value of the minimum value node (draw it out to visualise)
+            min_node = min_value_node(root.right)
+            root.val = min_node.val
+            root.right = remove(root.right, min_node.val)
+    
+    return root
+        
+
+
 first_node = TreeNode(2)
 second_node = TreeNode(1)
 third_node = TreeNode(3)
