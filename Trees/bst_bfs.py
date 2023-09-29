@@ -17,7 +17,10 @@ def bfs(root):
     # while there are nodes to be processed
     while len(queue) > 0:
         print("Level: ", level_of_tree)
+        
         # loop through elements in the queue
+        # len(queue) here acts as a 'constant'
+        # doesn't change even though we append elements to it within the loop
         for i in range(len(queue)):
             # FIFO
             curr = queue.popleft()
