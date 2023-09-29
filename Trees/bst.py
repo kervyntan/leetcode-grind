@@ -20,15 +20,15 @@ def search(root, target):
 
 def insert(root, target_node):
     if not root:
-        return TreeNode(val)
+        return TreeNode(target_node.val)
 
-    if val < root.val:
+    if target_node.val < root.val:
         # self.insertIntoBST(root.left, val)
-        root.left = self.insertIntoBST(root.left, val)
+        root.left = insert(root.left, target_node)
         # root.left = TreeNode(val)
-    elif val > root.val:
+    elif target_node.val > root.val:
         # self.insertIntoBST(root.right, val)
-        root.right = self.insertIntoBST(root.right, val)
+        root.right = insert(root.right, target_node)
         # root.right = TreeNode(val)
     return root
 
