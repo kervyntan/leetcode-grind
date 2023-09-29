@@ -23,6 +23,7 @@ def bfs(root):
         # doesn't change even though we append elements to it within the loop
         for i in range(len(queue)):
             # FIFO
+            # ensure we visit the nodes from left to right
             curr = queue.popleft()
             print(curr.val)
 
