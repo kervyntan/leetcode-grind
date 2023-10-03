@@ -14,3 +14,5 @@ for name in names:
 # to know where to put the object ((key, value) pair) in the array
 
 # Possible hashing function: Modding by size of array
+
+
