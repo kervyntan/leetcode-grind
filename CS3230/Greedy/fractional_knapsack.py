@@ -37,9 +37,13 @@ def fractional_knapsack(Wi, Pi, max_weight):
             
     return final_knapsack
 
-Wi = [3, 3, 2, 5, 1]
-Pi = [10, 15, 10, 20, 8]
-max_weight = 10
+# Wi = [3, 3, 2, 5, 1]
+# Pi = [10, 15, 10, 20, 8]
+# max_weight = 10
+
+Wi = [1, 3, 5, 4]
+Pi = [100, 30, 100, 20]
+max_weight = 4
 
 final_knapsack = fractional_knapsack(Wi, Pi, max_weight)
 print("\nFinal Knapsack: ", final_knapsack)
