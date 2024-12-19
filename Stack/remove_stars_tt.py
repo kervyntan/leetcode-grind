@@ -20,6 +20,9 @@ Output: ""
 """
 
 
+# Time complexity: O(n), where n = len(s). 
+# Space complexity: O(n), where n = len(s).
+# Pop (from end) and append have Amortized O(1)
 def remove_stars(s):
     # Optimal solution
     # Using the List as a Stack, rather than just naively looping and checking all chars' neighbours
