@@ -1,2 +1,2 @@
 # leetcode-grind
- Personal attempts/accepted submissions for LeetCode
+Interview questions come across as well as general practice
